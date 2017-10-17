@@ -1,0 +1,31 @@
+.main {
+    border: 1px solid grey;
+}
+
+.head {
+    text-align: center;
+    font-weight: bold;
+}
+
+.exam-info > * {
+    display: inline-block;
+    width: 33%;
+}
+
+.submit {
+    text-align: center;
+}
+
+.section {
+    border: 1px solid #eeeeee;
+    margin: 10px;
+}
+
+.section .title {
+    background-color: #eeeeee;
+    padding: 4px;
+}
+
+.section .content {
+    padding: 5px;
+}
