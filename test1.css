@@ -1,3 +1,7 @@
+textarea {
+    width: 100%;
+}
+
 .main {
     border: 1px solid grey;
 }
