@@ -1,11 +1,6 @@
 <html>
 <head>
-    <link href="test1.cs
-    0....................
-
-
-                             0.         .                       .0                       .0
-                             s" type="text/css" rel="stylesheet">
+    <link href="test1.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,9 +19,18 @@
             </div>
             <div class="section">
                 <div class="content exam-info">
-                    <div>班级(必填）：<input type="text" name="banji"></div>
-                    <div>学号(必填）：<input type="text" name="number"></div>
-                    <div>姓名(必填）：<input type="text" name="username"></div>
+                    <div>
+                        <label for="class">班级（必填）：</label>
+                        <input type="text" name="banji" id="class">
+                    </div>
+                    <div>
+                        <label for="student-number">学号(必填）：</label>
+                        <input type="text" name="number" id="student-number">
+                    </div>
+                    <div>
+                        <label for="name">姓名(必填）：</label>
+                        <input type="text" name="username" id="name">
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,13 +39,17 @@
             <div class="content">
                 <ol>
                     <li>
-                        <div>UML的中文全称是：</div>
-                        <div><input type="text" name="1-1"></div>
+                        <div>
+                            <label for="1-1">UML的中文全称是：</label>
+                            <br>
+                            <input type="text" name="1-1" id="1-1">
+                        </div>
                     </li>
                     <li>
-                        <div>对象最突出的特征是：</div>
                         <div>
-                            <input type="text" name="1-2-1">
+                            <label for="1-2-1">对象最突出的特征是：</label>
+                            <br>
+                            <input type="text" name="1-2-1" id="1-2-1">
                             <input type="text" name="1-2-2">
                             <input type="text" name="1-2-3">
                         </div>
@@ -56,19 +64,43 @@
                     <li>
                         <div>UML与软件工程的关系是：</div>
                         <div>
-                            <div><input type="radio" name="2-1" value="A">（A）UML就是软件工程</div>
-                            <div><input type="radio" name="2-1" value="B">（B）UML参与到软件工程中软件开发过程的几个阶段</div>
-                            <div><input type="radio" name="2-1" value="C">（C）UML与软件工程无关</div>
-                            <div><input type="radio" name="2-1" value="D">（D）UML是软件工程的一部分</div>
+                            <div>
+                                <input type="radio" name="2-1" id="2-1-A" value="A">
+                                <label for="2-1-A">（A）UML就是软件工程</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2-1" id="2-1-B" value="B">
+                                <label for="2-1-B">（B）UML参与到软件工程中软件开发过程的几个阶段</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2-1" id="2-1-C" value="C">（
+                                <label for="2-1-C">C）UML与软件工程无关</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2-1" id="2-1-D" value="D">（
+                                <label for="2-1-D">D）UML是软件工程的一部分</label>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <div>Java语言支持：</div>
                         <div>
-                            <div><input type="radio" name="2-2" value="A">(A）单继承</div>
-                            <div><input type="radio" name="2-2" value="B">(B）多继承</div>
-                            <div><input type="radio" name="2-2" value="C">(C）单继承和多继承都支持</div>
-                            <div><input type="radio" name="2-2" value="D">(D）单继承和多继承都不支持</div>
+                            <div>
+                                <input type="radio" name="2-2" id="2-2-A" value="A">
+                                <label for="2-2-A">(A）单继承</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2-2" id="2-2-B" value="B">
+                                <label for="2-2-B">(B）多继承</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2-2" id="2-2-C" value="C">
+                                <label for="2-2-C">(C）单继承和多继承都支持</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2-2" id="2-2-D" value="D">
+                                <label for="2-2-D">(D）单继承和多继承都不支持</label>
+                            </div>
                         </div>
                     </li>
                 </ol>
@@ -81,19 +113,43 @@
                     <li>
                         <div>用例的粒度分为以下哪三种</div>
                         <div>
-                            <div><input type="checkbox" name="3-1" value="A">(A)概述级</div>
-                            <div><input type="checkbox" name="3-1" value="B">(B)需求级</div>
-                            <div><input type="checkbox" name="3-1" value="C">(C)用户目标级</div>
-                            <div><input type="checkbox" name="3-1" value="D">(D)子功能级</div>
+                            <div>
+                                <input type="checkbox" name="3-1" id="3-1-A" value="A">
+                                <label for="3-1-A">(A)概述级</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="3-1" id="3-1-B" value="B">
+                                <label for="3-1-B">(B)(需求级)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="3-1" id="3-1-C" value="C">
+                                <label for="3-1-C">(C)用户目标级</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="3-1" id="3-1-D" value="D">
+                                <label for="3-1-D">(D)子功能级</label>
+                            </div>
                         </div>
                     </li>
                     <li>
                         <div>类图由以下哪三部分组成</div>
                         <div>
-                            <div><input type="checkbox" name="3-2" value="A">(A)名称（Name)</div>
-                            <div><input type="checkbox" name="3-2" value="B">(B)属性（Attribute)</div>
-                            <div><input type="checkbox" name="3-2" value="C">(C)操作（Operation)</div>
-                            <div><input type="checkbox" name="3-2" value="D">(D)方法（Function)</div>
+                            <div>
+                                <input type="checkbox" name="3-2" id="3-2-A" value="A">
+                                <label for="3-2-A">(A)名称（Name)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="3-2" id="3-2-B" value="B">
+                                <label for="3-2-B">(B)属性（Attribute)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="3-2" id="3-2-C"  value="C">
+                                <label for="3-2-C">(C)操作（Operation)</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="3-2" id="3-2-D" value="D">
+                                <label for="3-2-D">(D)方法（Function)</label>
+                            </div>
                         </div>
                     </li>
                 </ol>
@@ -106,15 +162,27 @@
                     <li>
                         <span>用例图只是用于和客户交流和沟通的，用于确定需求。</span>
                         <span>
-                <span><input type="radio" name="4-1" value="right">对</span>
-                <span><input type="radio" name="4-1" value="wrong">错</span>
+                <span>
+                    <input type="radio" name="4-1" id="4-1-right" value="right">
+                    <label for="4-1-right">对</label>
+                </span>
+                <span>
+                    <input type="radio" name="4-1" id="4-1-wrong" value="wrong">
+                    <label for="4-1-wrong">错</label>
+                </span>
                 </span>
                     </li>
                     <li>
                         <span>在状态图中，终止状态在一个状态图中允许有任意多个。</span>
                         <span>
-                    <span><input type="radio" name="4-2" value="right">对</span>
-                    <span><input type="radio" name="4-2" value="wrong">错</span>
+                    <span>
+                        <input type="radio" name="4-2" id="4-2-right" value="right">
+                        <label for="4-2-right">对</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="4-2" id="4-2-wrong" value="wrong">
+                        <label for="4-2-wrong">错</label>
+                    </span>
                 </span>
                     </li>
                 </ol>
