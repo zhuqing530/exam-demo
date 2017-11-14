@@ -1,11 +1,13 @@
 <html>
 <head>
-    <link href="test1.css" type="text/css" rel="stylesheet">
+    <link href="./test1.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8"/>
+    <script src="./index.js"></script>
 </head>
 
 <body>
 <div class="main">
-    <form action="/abc" method="post">
+    <form onsubmit="return calculateTotalMark()">
         <div>
             <h1 class="head">统一建模语言理论测试</h1>
         </div>
@@ -14,7 +16,7 @@
                 <div class="content exam-info">
                     <div>考试科目：统一建模语言</div>
                     <div>时间：100分钟</div>
-                    <div>得分：</div>
+                    <div>得分：<span id="total-mark"></span></div>
                 </div>
             </div>
             <div class="section">
