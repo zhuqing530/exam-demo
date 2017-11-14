@@ -19,7 +19,31 @@ function updateTotalMark(totalMark) {
     document.getElementById("total-mark").innerHTML = totalMark;
 }
 
+function checkInfoValid() {
+    const clazz = document.getElementById("class").value;
+    if (clazz.trim().length === 0) {
+        alert("班级信息为空，请填写");
+        return false;
+    }
+
+    const studentNumber = document.getElementById("student-number").value;
+    if (studentNumber.trim().length === 0) {
+        alert("学号信息为空，请填写");
+        return false;
+    }
+
+    const username = document.getElementById("username").value;
+    if (username.trim().length === 0) {
+        alert("姓名信息为空，请填写");
+        return false;
+    }
+
+    return true;
+}
+
 function calculateTotalMark() {
-    updateTotalMark(99);
+    if (checkInfoValid()) {
+        updateTotalMark(99);
+    }
     return false;
 }
