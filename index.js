@@ -184,5 +184,4 @@ function execute() {
         updateTotalMark(totalMark);
         alert('计算完成');
     }
-    return false;
 }
