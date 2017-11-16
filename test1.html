@@ -7,7 +7,7 @@
 
 <body>
 <div class="main">
-    <form onsubmit="return calculateTotalMark()">
+    <form id="form">
         <div>
             <h1 class="head">统一建模语言理论测试</h1>
         </div>
@@ -50,9 +50,9 @@
                         <div>
                             <label for="1-2-1">对象最突出的特征是：</label>
                             <br>
-                            <input type="text" name="1-2-1" id="1-2-1">
-                            <input type="text" name="1-2-2">
-                            <input type="text" name="1-2-3">
+                            <input type="text" name="1-2" id="1-2-1">
+                            <input type="text" name="1-2">
+                            <input type="text" name="1-2">
                         </div>
                     </li>
                 </ol>
@@ -195,14 +195,14 @@
                 <ol>
                     <li>
                         <div>简述什么是模型以及模型的表现形式？</div>
-                        <textarea rows="5"></textarea>
+                        <textarea rows="5" name="5-1"></textarea>
                     </li>
                 </ol>
 
             </div>
         </div>
         <div class="submit">
-            <input type="submit" name="grades" value="计算分数">
+            <input type="button" name="grades" value="计算分数" onclick="execute();return false">
         </div>
     </form>
 </div>
