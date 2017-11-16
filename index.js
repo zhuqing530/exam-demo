@@ -81,6 +81,7 @@ function getUserAnswers3() {
 
 function getUserAnswers4() {
     function _convertToBoolean(value) {
+        return value === "" ? null : value === "right";
         if (value === "") {
             return null;
         } else {
