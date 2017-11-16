@@ -20,30 +20,32 @@ function updateTotalMark(totalMark) {
 }
 
 function checkInfoValid() {
-    const clazz = document.getElementById("class").value;
-    if (clazz.trim().length === 0) {
-        alert("班级信息为空，请填写");
-        return false;
+    function _checkInput(inputId, infoName) {
+        const clazz = document.getElementById(inputId).value;
+        if (clazz.trim().length === 0) {
+            alert(infoName + "信息为空，请填写");
+            return false;
+        } else {
+            return true;
+        }
     }
 
-    const studentNumber = document.getElementById("student-number").value;
-    if (studentNumber.trim().length === 0) {
-        alert("学号信息为空，请填写");
-        return false;
-    }
+    return _checkInput("class", "班级")
+        && _checkInput("student-number", "学号")
+        && _checkInput("username", "姓名");
+}
 
-    const username = document.getElementById("username").value;
-    if (username.trim().length === 0) {
-        alert("姓名信息为空，请填写");
-        return false;
-    }
+function getInputs(inputName) {
+    return document.getElementById("form")[inputName];
+}
 
-    return true;
+function getInputValue(inputName) {
+    return getInputs(inputName).value;
 }
 
 function getUserAnswers1() {
-    const answer1_1 = [document.getElementById("form")["1-1"].value.trim()];
-    const answer1_2inputs = document.getElementById("form")["1-2"];
+    const answer1_1 = [getInputValue("1-1").trim()];
+    const answer1_2inputs = getInputs("1-2");
     const answers1_2 = [];
     for (let i = 0; i < answer1_2inputs.length; i++) {
         const input = answer1_2inputs[i];
@@ -53,13 +55,13 @@ function getUserAnswers1() {
 }
 
 function getUserAnswers2() {
-    const answer2_1 = document.getElementById("form")["2-1"].value;
-    const answer2_2 = document.getElementById("form")["2-2"].value;
+    const answer2_1 = getInputValue("2-1");
+    const answer2_2 = getInputValue("2-2");
     return [answer2_1, answer2_2];
 }
 
 function getUserAnswers3() {
-    const answer3_1inputs = document.getElementById("form")["3-1"];
+    const answer3_1inputs = getInputs("3-1");
     let answer3_1 = "";
     for (let i = 0; i < answer3_1inputs.length; i++) {
         const checkbox = answer3_1inputs[i];
@@ -68,7 +70,7 @@ function getUserAnswers3() {
         }
     }
 
-    const answer3_2inputs = document.getElementById("form")["3-2"];
+    const answer3_2inputs = getInputs("3-2");
     let answer3_2 = "";
     for (let i = 0; i < answer3_2inputs.length; i++) {
         const checkbox = answer3_2inputs[i];
@@ -88,14 +90,14 @@ function getUserAnswers4() {
         }
     }
 
-    const answer4_1 = _convertToBoolean(document.getElementById("form")["4-1"].value);
-    const answer4_2 = _convertToBoolean(document.getElementById("form")["4-2"].value);
+    const answer4_1 = _convertToBoolean(getInputValue("4-1"));
+    const answer4_2 = _convertToBoolean(getInputValue("4-2"));
 
     return [answer4_1, answer4_2];
 }
 
 function getUserAnswers5() {
-    const answer5_1 = document.getElementById("form")["5-1"].value.trim();
+    const answer5_1 =getInputValue("5-1").trim();
     return [answer5_1];
 }
 
