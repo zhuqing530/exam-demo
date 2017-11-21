@@ -1,4 +1,4 @@
-const preDefinedAnswers = [{
+const PRE_DEFINED_ANSWER = [{
     unitMark: 5,
     answers: [["统一建模语言"], ["封装性", "继承性", "多态性"]]
 }, {
@@ -82,11 +82,6 @@ function getUserAnswers3() {
 function getUserAnswers4() {
     function _convertToBoolean(value) {
         return value === "" ? null : value === "right";
-        if (value === "") {
-            return null;
-        } else {
-            return value === "right";
-        }
     }
 
     const answer4_1 = _convertToBoolean(getInputValue("4-1"));
@@ -158,7 +153,7 @@ function calculateTotalMark(userAnswers) {
     let result = 0;
 
     const userAnswer0 = userAnswers[0];
-    const predefinedAnswer0 = preDefinedAnswers[0];
+    const predefinedAnswer0 = PRE_DEFINED_ANSWER[0];
     for (let i = 0; i < userAnswer0.length; i++) {
         const userAnswer = userAnswer0[i];
         const predefinedAnswer = predefinedAnswer0.answers[i];
@@ -168,7 +163,7 @@ function calculateTotalMark(userAnswers) {
 
     for (let i = 1; i < 5; i++) {
         const userAnswer = userAnswers[i];
-        const predefinedAnswer = preDefinedAnswers[i];
+        const predefinedAnswer = PRE_DEFINED_ANSWER[i];
         const count = findCountOfSameElementsWithSamePosition(userAnswer, predefinedAnswer.answers);
         result += count * predefinedAnswer.unitMark;
     }
